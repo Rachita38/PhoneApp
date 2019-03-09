@@ -1,0 +1,52 @@
+body
+{
+ padding:0px;
+ margin:0px;
+}
+.header
+{
+    background-color:#1A3333;
+    color:white;
+    text-align: center;
+    top:0px;
+    width:100%;
+    padding:5px;
+}
+form
+{
+    width:50%;
+    padding:20px;
+    border:1px solid #cbcbcb;
+    margin: 5px auto;
+}
+label
+{
+    width:50%;
+    color:cadetblue;
+    font-family:monospace;
+    font-size:20px;
+        
+}
+.textInput
+{
+    margin-top: 2px;
+    height: 28px;
+    border: 1px solid #5E6E66;
+    font-size:16px;
+    padding:1px;
+    width:100%;
+}
+
+#error_msg1,#error_msg2,#error_msg3,#error_msg4
+{
+    width:100%;
+    color: #FF0000;
+    text-align:center;
+    font-size:15px;
+    font-style: oblique;
+    
+}
+td
+{
+    text-align:left;
+}

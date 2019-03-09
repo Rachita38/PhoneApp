@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    
+    var mainLib = {};
+    
+        mainLib.validateSubmit = function (){
+        
+        var FirstName = $('#txtFirstName').val();
+        var LastName = $('#txtLastName').val();
+        var Address = $('#txtAddress').val();
+        var PhoneNo = $('#txtPhoneNo').val();
+        var flag=true;
+            
+        if(FirstName == null || FirstName == "")
+        {
+            
+            $('#error_msg1').text('Please enter First Name');
+            $('#error_msg1').css('display', 'block');
+              flag=false;
+        }
+        if(LastName == null || LastName == "")
+        {
+             
+            $('#error_msg2').text('Please enter Last Name');
+            $('#error_msg2').css('display', 'block');
+              flag=false;
+        }
+        if(Address == null || Address == "")
+        {
+             
+            $('#error_msg3').text('Please enter your Address');
+            $('#error_msg3').css('display', 'block');
+              flag=false;
+        }
+        if(PhoneNo == null || PhoneNo == "")
+        {
+             
+            $('#error_msg4').text('Please enter your Phone number');
+            $('#error_msg4').css('display', 'block');
+              flag=false;
+        }
+       
+        if(flag==false){
+            return false;
+        }
+        else{
+        $('#error_msg1').css('display', 'none');
+        $('#error_msg2').css('display', 'none');
+        $('#error_msg3').css('display', 'none');
+        $('#error_msg4').css('display', 'none');
+                return true ;
+        }
+    };
+    
+    $(document).ready(function(){
+    
+      $("#btnAdd").click(function(){
+        
+          return mainLib.validateSubmit();          
+       
+      });
+  
+    });
+    
+        
+</script>
+    
+<title>Add and Delete Subscribers</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    
+    <div id="error_msg" style="display:none"> </div>
+    
+    <div class="header">
+    <h1>Add Subscriber</h1> 
+    </div>
+    
+    <form method="post" action="add.php">
+        <table width="700">
+            <tr>
+            <td><label>First Name:</label></td>
+            <td><input id="txtFirstName" type="text" name="FirstName" class="textInput"></td>
+            <td> <div id="error_msg1" style="display:none"> </div></td>
+            </tr>
+            
+            <tr>
+            <td><label>Last Name:</label></td>
+            <td><input id="txtLastName" type="text" name="LastName" class="textInput"></td>
+            <td> <div id="error_msg2" style="display:none"> </div></td>
+            </tr>
+            
+            <tr>
+            <td><label>Address:</label></td>
+            <td><input id="txtAddress" type="text" name="Address" class="textInput"></td>
+            <td> <div id="error_msg3" style="display:none"> </div></td>
+            </tr>
+            
+            <tr>
+            <td><label>Phone Number:</label></td>
+            <td><input id="txtPhoneNo" type="text" name="PhoneNo" class="textInput"></td>
+            <td> <div id="error_msg4" style="display:none"> </div></td>
+            </tr>
+            
+            <tr>
+            <td><input id="btnAdd" type="submit" name="Add_Subscriber" value="Add Subscriber"></td>
+            <td><a href="displayRecords.php"><input type="button" value="Display Susbcribers"></a></td>
+            </tr>
+        
+        </table>
+    </form>
+    
+    
+</body>
+</html>
+    
