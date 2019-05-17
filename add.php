@@ -32,6 +32,6 @@ else
     <div class="header">
     <h1>Record added Sucessfully!!</h1> 
     </div>
-
+        <a href="displayRecords.php"><input type="button" value="Display Susbcribers"></a>
 </body>
 </html>
